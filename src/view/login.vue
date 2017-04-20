@@ -48,6 +48,7 @@
                 //         return false;
                 //     }
                 // });
+                this.$router.push('home');
             }
         }
     }
@@ -58,6 +59,7 @@
         position: relative;
         width:100%;
         height:100%;
+        background: #324157;
     }
     .ms-title{
         position: absolute;

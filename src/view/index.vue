@@ -5,7 +5,7 @@
         <!-- 侧边栏导航公共模块 -->
         <side-bar></side-bar>
         <!-- 路由导航的不同主内容区 -->
-        <div id="main">
+        <div class='content'>
             <router-view></router-view>
         </div>
     </div>
