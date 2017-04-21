@@ -6,6 +6,10 @@
 
 <style lang='scss'>
 	@import './css/common';
+    #app{
+    	width: 100%;
+    	height: 100%;
+    }
 	.content{
 		  background:none repeat scroll 0 0 #fff;
 		  position:absolute;

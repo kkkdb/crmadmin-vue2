@@ -75,8 +75,8 @@
         position: absolute;
         left:50%;
         top:50%;
-        width:300px;
-        height:160px;
+        width:380px;
+        height:240px;
         margin:-150px 0 0 -190px;
         padding:40px;
         border-radius: 5px;

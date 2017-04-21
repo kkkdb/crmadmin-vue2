@@ -3,12 +3,18 @@
         <div class="logo">CRM 管理系统</div>
 		<div class="levelOneMenu">
 			<el-menu :default-active="oneLevel" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-				<el-menu-item index="1"><i class="el-icon-star-on"></i> 会员中心</el-menu-item>
-				<el-menu-item index="2"><i class="el-icon-star-on"></i> 营销触达</el-menu-item>
-				<el-menu-item index="3"><i class="el-icon-star-on"></i> 数据洞察</el-menu-item>
+				<el-menu-item index="1"><i class="fa fa-diamond"></i> 会员中心</el-menu-item>
+				<el-menu-item index="2"><i class="fa fa-yelp"></i> 营销触达</el-menu-item>
+				<el-menu-item index="3"><i class="fa fa-pie-chart"></i> 数据洞察</el-menu-item>
 			</el-menu>
 		</div>
-        <div class="user-info">
+        <div class="loginOut right" @click='loginOut'>
+        	<i class="fa fa-power-off"></i>
+        </div>
+        <div class="recharge right">
+        	<span>充</span>
+        </div>
+        <div class="user-info right">
             <img class="user-logo" src="../img/user.jpg">
             <span class="username">{{username}}，您好！</span>
         </div>
@@ -27,47 +33,57 @@
 	        			id: 'home'
 		        		},{
 		        			name: '生日权益',
-		        			id: '1'
+		        			id: 'aaa'
 		        		},{
 		        			name: '会员等级设置',
-		        			id: '2'
+		        			id: 'bbb'
 		        		}]
 		        	},{
 		        		title: '会员积分',
 		        		sub_list: [{
-	        			name: '会员积分管理',
-	        			id: '3'
+	        				name: '会员积分管理',
+	        				id: 'ccc'
 		        		},{
 		        			name: '活动积分设置',
-		        			id: '4'
+		        			id: 'ddd'
 		        		},{
 		        			name: '积分基础设置',
-		        			id: '5'
+		        			id: 'eee'
 		        		}]
 		        	},{
 		        		title: '兑礼及试用',
 		        		sub_list: [{
-	        			name: '积分兑礼设置',
-	        			id: '6'
+	        				name: '积分兑礼设置',
+	        				id: 'fff'
 		        		},{
 		        			name: '试用申请设置',
-		        			id: '7'
+		        			id: 'ggg'
 		        		},{
 		        			name: '积分兑礼记录',
-		        			id: '8'
+		        			id: 'hhh'
 		        		},{
 		        			name: '试用申请记录',
-		        			id: '9'
+		        			id: 'iii'
 		        		}]
 		        	}],
 		        	[{
 		        		title: '等级二',
 		        		sub_list: [{
-		        			id: 23,
+		        			id: "jjj",
 		        			name: '2-1'
 		        		},{
-		        			id: 24,
+		        			id: "kkk",
 		        			name: '2-2'
+		        		}]
+		        	}],
+		        	[{
+		        		title: '等级三',
+		        		sub_list: [{
+		        			id: "lll",
+		        			name: '3-1'
+		        		},{
+		        			id: "mmm",
+		        			name: '3-2'
 		        		}]
 		        	}]
         		]
@@ -77,15 +93,13 @@
         	...mapState(['username','oneLevel','menuList']),
         },
         mounted(){
-        	this.handleSelect(1);
+        	this.handleSelect("1");
         },
         methods:{
         	...mapMutations(['changeMenuLevel','changeMenu']),
-            handleCommand(command) {
-                if(command == 'loginout'){
-                    localStorage.removeItem('ms_username')
-                    this.$router.push('/login');
-                }
+            loginOut(command) {
+                localStorage.removeItem('ms_username')
+                this.$router.push({name: 'login'});
             },
             handleSelect(key){
             	this.changeMenuLevel(key);
@@ -95,6 +109,7 @@
     }
 </script>
 <style scoped lang="scss">
+	@import '../css/mixin';
     .header {
         position: relative;
         box-sizing: border-box;
@@ -116,29 +131,33 @@
     .levelOneMenu{
     	margin-left: 50px;
     	float: left;
-    	width: 30%;
+    	width: 360px;
 		ul{
 			background-color: #fff;
 			li{
 	    		height: 50px;
 	    		line-height: 50px;
 	    		background: #fff;
+	    		color: #999;
+	    		&.is-active{
+	    			color: #20a0ff;
+	    		}
 	    	}
 		}
     }
     .user-info {
-        float: right;
         height: 100%;
         font-size: 16px;
         color: #fff;
-        width: 200px;
 		position: relative;
 		padding-left: 40px;
+		padding-right: 20px;
         img{
         	position: absolute;
         	height: 30px;
         	top: 10px;
         	left: 0;
+        	@include borderRadius(100%);
         }
         span{
         	display: inline-block;
@@ -147,5 +166,26 @@
         	color: #999;
         	font-size: 14px;
         }
+    }
+    .loginOut{
+    	width: 50px;
+    	text-align: center;
+    	color: #999;
+    	border-left: 1px solid $c6;
+    	font-size: 20px;
+    	cursor: pointer;
+    }
+    .recharge{
+    	width: 50px;
+    	text-align: center;
+    	border-left: 1px solid $c6;
+    	font-size: 12px;
+
+    	span{
+    		background-color: $c6;
+    		cursor: pointer;
+    		padding: 2.5px 5px;
+    		@include borderRadius(100%);
+    	}
     }
 </style>
