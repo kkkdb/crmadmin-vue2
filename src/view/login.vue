@@ -39,16 +39,16 @@
         methods: {
             submitForm(formName) {
                 const self = this;
-                // self.$refs[formName].validate((valid) => {
-                //     if (valid) {
+                self.$refs[formName].validate((valid) => {
+                    if (valid) {
+                    this.$router.push('home');
                 //         localStorage.setItem('ms_username',self.ruleForm.username);
                 //         self.$router.push('/readme');
                 //     } else {
                 //         console.log('error submit!!');
                 //         return false;
-                //     }
-                // });
-                this.$router.push('home');
+                    }
+                });
             }
         }
     }
