@@ -1,13 +1,8 @@
-$blue: #3190e8;
-
-$c1: #ea68a2;
-$c2: #ee92bb;
-$c3: #333333;
-$c4: #999999;
-$c5: #d2d2d2;
-$c6: #dedede;
-$c7: #f2f2f2;
-$c8: #ffffff;
+$primary: #008de7;
+$border: #e0e3e6;
+$divider: #eff1f2;
+$bkg: #f2f3f5;
+$normal: #48576a;
 
 // 背景图片地址和大小
 @mixin bis($url) { 

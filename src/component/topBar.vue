@@ -1,14 +1,14 @@
 <template>
     <div class="header">
         <div class="logo">CRM 管理系统</div>
-		<div class="levelOneMenu">
+		<div class="level-one-menu">
 			<el-menu :default-active="oneLevel" class="el-menu-demo" mode="horizontal" @select="handleSelect">
 				<el-menu-item index="1"><i class="fa fa-diamond"></i> 会员中心</el-menu-item>
 				<el-menu-item index="2"><i class="fa fa-yelp"></i> 营销触达</el-menu-item>
 				<el-menu-item index="3"><i class="fa fa-pie-chart"></i> 数据洞察</el-menu-item>
 			</el-menu>
 		</div>
-        <div class="loginOut right" @click='loginOut'>
+        <div class="login-out right" @click='loginOut'>
         	<i class="fa fa-power-off"></i>
         </div>
         <div class="recharge right">
@@ -29,14 +29,14 @@
             		[{
 	            		title: '会员等级',
 		        		sub_list: [{
-	        			name: '会员等级管理',
-	        			id: 'home'
+    	        			name: '会员等级管理',
+    	        			id: 'vipLevelManage'
 		        		},{
 		        			name: '生日权益',
-		        			id: 'aaa'
+		        			id: 'birthdayRights'
 		        		},{
 		        			name: '会员等级设置',
-		        			id: 'bbb'
+		        			id: 'vipLevelSetting'
 		        		}]
 		        	},{
 		        		title: '会员积分',
@@ -118,7 +118,7 @@
         font-size: 22px;
         line-height: 50px;
         color: #fff;
-        box-shadow: 0px 5px 5px #F5F5F7;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
         background: #fff;
     }
     .header .logo{
@@ -128,7 +128,7 @@
         text-align: center;
         font-size: 18px;
     }
-    .levelOneMenu{
+    .level-one-menu{
     	margin-left: 50px;
     	float: left;
     	width: 360px;
@@ -167,22 +167,22 @@
         	font-size: 14px;
         }
     }
-    .loginOut{
+    .login-out{
     	width: 50px;
     	text-align: center;
     	color: #999;
-    	border-left: 1px solid $c6;
+    	border-left: 1px solid $border;
     	font-size: 20px;
     	cursor: pointer;
     }
     .recharge{
     	width: 50px;
     	text-align: center;
-    	border-left: 1px solid $c6;
+    	border-left: 1px solid $border;
     	font-size: 12px;
 
     	span{
-    		background-color: $c6;
+    		background-color: $border;
     		cursor: pointer;
     		padding: 2.5px 5px;
     		@include borderRadius(100%);

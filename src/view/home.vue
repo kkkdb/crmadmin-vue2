@@ -1,5 +1,5 @@
 <template>
-	<div class="mainContent">
+	<div class="home">
 		欢迎光临
 	</div>
 </template>
@@ -10,6 +10,18 @@
 			return{
 				
 			}
+		},
+		methods:{
+			
 		}
 	}
 </script>
+
+<style lang="scss" scoped>
+	@import '../css/mixin';
+
+	.home{
+		padding: 20px;
+		@include wh(100%, 100%);
+	}
+</style>

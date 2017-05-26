@@ -47,7 +47,7 @@ textarea {
 html, body {
   height: 100%;
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #f2f3f5;
 }
 .clear:after {
   content: '';
@@ -123,4 +123,15 @@ html, body {
 }
 .text-pink{
   color: #ea68a2;
+}
+
+.el-button{
+  padding: 8px 24px !important;
+}
+
+.button-radius{
+  border-bottom-left-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-top-right-radius: 20px !important;
 }
