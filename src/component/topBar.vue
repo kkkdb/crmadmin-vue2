@@ -129,9 +129,7 @@
         font-size: 18px;
     }
     .level-one-menu{
-    	margin-left: 50px;
     	float: left;
-    	width: 360px;
 		ul{
 			background-color: #fff;
 			li{
