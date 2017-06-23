@@ -1,5 +1,5 @@
 <template>
-	<div class="vip-level-manage">
+	<div class="vip-level-manage pd-lr-20">
 		<nav-bar :navlist='navList'></nav-bar>
 		<div class="fourth-floor">
 			<el-button type="primary" size="small" class='button-radius' @click='navigateTo("first")'>批量调整会员等级</el-button>
@@ -35,10 +35,10 @@
 					<el-table-column align='center' label="操作">
 						<template scope="scope">
 							<el-tooltip class="item" effect="dark" content="编辑" placement="top">
-					        	<i class="el-icon-setting" @click="handleEdit(scope.$index, scope.row)" style="cursor: pointer;"></i>
+					        	<i class="el-icon-setting" @click="handleEdit(scope.$index, scope.row)" style="padding:5px;cursor: pointer;"></i>
       						</el-tooltip>
       						<el-tooltip class="item" effect="dark" content="查看详情" placement="top" style='margin-left: 20px;'>
-					        	<i class="el-icon-more" @click="handleDetail(scope.$index, scope.row)" style="cursor: pointer;"></i>
+					        	<i class="el-icon-more" @click="handleDetail(scope.$index, scope.row)" style="padding:5px;cursor: pointer;"></i>
       						</el-tooltip>
 				      	</template>
 					</el-table-column>
@@ -154,7 +154,6 @@
 	@import '../../../css/mixin';
 
 	.vip-level-manage{
-		padding: 0 20px;
 		@include wh(100%, 100%);
 	}
 	.fourth-floor{

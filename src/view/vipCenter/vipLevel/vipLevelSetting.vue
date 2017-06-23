@@ -1,5 +1,5 @@
 <template>
-	<div class="vip-level-setting">
+	<div class="vip-level-setting pd-lr-20">
 		<nav-bar :navlist='navList'></nav-bar>
 		<div class="table-content">
 			<template>
@@ -102,7 +102,6 @@
 	@import '../../../css/mixin';
 
 	.vip-level-setting{
-		padding: 0 20px;
 		@include wh(100%, 100%);
 	}
 	.table-content{

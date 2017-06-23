@@ -135,3 +135,17 @@ html, body {
   border-bottom-right-radius: 20px !important;
   border-top-right-radius: 20px !important;
 }
+
+.el-breadcrumb__item:last-child .el-breadcrumb__item__inner, .el-breadcrumb__item:last-child .el-breadcrumb__item__inner a, .el-breadcrumb__item:last-child .el-breadcrumb__item__inner a:hover, .el-breadcrumb__item:last-child .el-breadcrumb__item__inner:hover{
+  color: #20a0ff !important;
+}
+
+.pd-lr-20{
+  padding: 0 20px;
+}
+.text-center{
+  text-align: center;
+}
+.block{
+  display: block !important;
+}

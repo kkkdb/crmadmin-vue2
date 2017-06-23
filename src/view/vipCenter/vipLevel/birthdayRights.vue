@@ -1,5 +1,5 @@
 <template>
-	<div class='brithday-rights'>
+	<div class='brithday-rights pd-lr-20'>
 		<nav-bar :navlist='navList'></nav-bar>
 		<div class="meg-tips">
 			当会员等级设置和积分基础设置未设置时，提示：若要设置会员生日特权，请先进行 <router-link :to="{name: 'vipLevelSetting'}" class='routerLink'>会员等级设置</router-link> 和 <router-link :to="{name: 'vipLevelSetting'}" class='routerLink'>积分基础设置</router-link>。
@@ -72,9 +72,6 @@
 
 <style lang="scss" scoped>
 	@import '../../../css/mixin';
-	.brithday-rights{
-		padding: 0 20px;
-	}
 	.meg-tips{
 		margin: 10px 0;
 		background-color: #FCF3DC;

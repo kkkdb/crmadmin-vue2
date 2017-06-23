@@ -42,28 +42,28 @@
 		        		title: '会员积分',
 		        		sub_list: [{
 	        				name: '会员积分管理',
-	        				id: 'ccc'
+	        				id: 'vipPointManage'
 		        		},{
 		        			name: '活动积分设置',
-		        			id: 'ddd'
+		        			id: 'activityPointSetting'
 		        		},{
 		        			name: '积分基础设置',
-		        			id: 'eee'
+		        			id: 'vipBasicSetting'
 		        		}]
 		        	},{
 		        		title: '兑礼及试用',
 		        		sub_list: [{
 	        				name: '积分兑礼设置',
-	        				id: 'fff'
+	        				id: 'pointExchangeSetting'
 		        		},{
 		        			name: '试用申请设置',
-		        			id: 'ggg'
+		        			id: 'trialApplySetting'
 		        		},{
 		        			name: '积分兑礼记录',
-		        			id: 'hhh'
+		        			id: 'pointExchangeRecord'
 		        		},{
 		        			name: '试用申请记录',
-		        			id: 'iii'
+		        			id: 'trialApplyRecord'
 		        		}]
 		        	}],
 		        	[{
