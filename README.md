@@ -1,7 +1,7 @@
 # CRM微信会员中心后台管理系统
 ## 概述
 
-利用vue2.0+webpack+element-ui完成了后台管理系统的框架搭建，利用vuex实现了topBar一级菜单和sideBar二级菜单的交互。
+利用vue2.0+vuex+webpack+element-ui+完成了后台管理系统的框架搭建，利用vuex实现了topBar一级菜单和sideBar二级菜单的交互。
 
 还只是一个框架，需要的可以借鉴一下。
 
