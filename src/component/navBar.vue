@@ -14,8 +14,8 @@
 <style scoped lang="scss">
 	@import '../css/mixin';
 	.nav-bar{
-		margin-top: 20px;
-		height: 30px;
+		padding-top: 20px;
+		height: 50px;
 		border-bottom: 1px solid $border;
 	}
 </style>

@@ -6,6 +6,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
   text-decoration: none;
   border: none;
   // color: #333;
+  // font-size: 14px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Microsoft Yahei",sans-serif;
@@ -91,33 +92,6 @@ html, body {
 .router-fade-enter, .router-fade-leave-active {
   opacity: 0;
 }
-
-.btn-primary {
-  width: 3.584rem;
-  height: 1.5rem;
-  background-color: #ea68a2;
-  color: #fff;
-  font-size: 0.6rem;
-  border-radius: 4px;
-}
-.btn-default {
-  width: 3.584rem;
-  height: 1.5rem;
-  background-color: #d2d2d2;
-  color: #f2f2f2;
-  font-size: 0.6rem;
-  border-radius: 4px;
-  opacity: 0.7;
-}
-.btn-sm {
-  width: 2.219rem !important;
-  height: 1.066rem !important;
-  font-size: 0.555rem;
-}
-.btn-block {
-  width: 100% !important;
-  height: 1.7rem !important;
-}
 .text-note{
   color: #999999;
 }
@@ -127,6 +101,10 @@ html, body {
 
 .el-button{
   padding: 8px 24px !important;
+}
+
+.el-button.el-button--small{
+  padding: 7px 9px !important;
 }
 
 .button-radius{
@@ -148,4 +126,31 @@ html, body {
 }
 .block{
   display: block !important;
+}
+.no-padding{
+  padding: 0 !important;
+}
+.btn-primary{
+  color: #fff;
+  background-color: #3089DC;
+  &:hover:not(.btn-disabled){
+    background-color: #1170BC;
+  }
+}
+.btn-secondary{
+  color: #3089DC;
+  background-color: #E4F0FD;
+
+  &:hover:not(.btn-disabled){
+    color: #fff;
+    background-color: #3089dc;
+  }
+}
+.btn-disabled{
+  color: #C7C7C7;
+  background-color: #FAFAFA;
+  cursor: not-allowed;
+  &:hover{
+    
+  }
 }

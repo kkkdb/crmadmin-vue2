@@ -3,73 +3,52 @@
 		<nav-bar :navlist='navList'></nav-bar>
 		<div class="form-content">
 			<el-form :model="recordForm" ref="recordForm" :inline="true" label-width="85px">
-				<el-row>
-					<el-col :span='5'>
-						<el-form-item label='查询时间'>
-							<el-date-picker
-						      	v-model="recordForm.date"
-						      	type="daterange"
-						      	align="right"
-						      	placeholder="请选择时间段"
-						      	:picker-options="pickerOptions">
-						    </el-date-picker>
-						</el-form-item>
-					</el-col>
-					<el-col :span='5'>
-						<el-form-item label='领取方式'>
-							<el-select v-model='recordForm.exchangeType'>
-								<el-option label='快递寄送' value='shipping'></el-option>
-								<el-option label='专柜领用' value='counter'></el-option>
-							</el-select>
-						</el-form-item>
-					</el-col>
-					<el-col :span='5'>
-						<el-form-item label='所属专柜' v-if='recordForm.exchangeType == "counter"'>
-							<el-select v-model='recordForm.counterId'>
-								<el-option label='全部' value=''></el-option>
-								<el-option label='杭州西湖银泰店' value='1'></el-option>
-								<el-option label='杭州滨江宝龙店' value='2'></el-option>
-							</el-select>
-						</el-form-item>
-					</el-col>
-					<el-col :span='5'>
-						<el-form-item label='订单状态'>
-							<el-select v-model='recordForm.orderStatus'>
-								<el-option
-									v-for='item in orderOptions'
-									:key='item.value'
-									:value='item.value'
-									:label='item.label'>
-								</el-option>
-							</el-select>
-						</el-form-item>
-					</el-col>
-				</el-row>
-				<el-row>
-					<el-col :span='5'>
-						<el-form-item label='礼品消息'>
-							<el-input v-model='recordForm.giftInfo' placeholder='礼品名称/内部ID/外部ID' style='width: 220px;'></el-input>
-						</el-form-item>
-					</el-col>
-					<el-col :span='5'>
-						<el-form-item label='积分兑换数'>
-							<el-input v-model='recordForm.giftExchangeNum' style='width: 200px;'></el-input>
-						</el-form-item>
-					</el-col>
-					<el-col :span='5'>
-						<el-form-item label='订单编号'>
-							<el-input v-model='recordForm.orderNumber' style='width: 200px;'></el-input>
-						</el-form-item>
-					</el-col>
-					<el-col :span='5'>
-						<el-form-item label='会员手机号'>
-							<el-input v-model='recordForm.phoneNumber' style='width: 200px;'></el-input>
-						</el-form-item>
-					</el-col>
-					<el-col :span='4'>
-						<el-button type='primary' class='button-radius'>查 询</el-button>							
-					</el-col>
-				</el-row>
+				<el-form-item label='查询时间'>
+					<el-date-picker
+				      	v-model="recordForm.date"
+				      	type="daterange"
+				      	align="right"
+				      	placeholder="请选择时间段"
+				      	:picker-options="pickerOptions">
+				    </el-date-picker>
+				</el-form-item>
+				<el-form-item label='领取方式'>
+					<el-select v-model='recordForm.exchangeType'>
+						<el-option label='快递寄送' value='shipping'></el-option>
+						<el-option label='专柜领用' value='counter'></el-option>
+					</el-select>
+				</el-form-item>
+				<el-form-item label='所属专柜' v-if='recordForm.exchangeType == "counter"'>
+					<el-select v-model='recordForm.counterId'>
+						<el-option label='全部' value=''></el-option>
+						<el-option label='杭州西湖银泰店' value='1'></el-option>
+						<el-option label='杭州滨江宝龙店' value='2'></el-option>
+					</el-select>
+				</el-form-item>
+				<el-form-item label='订单状态'>
+					<el-select v-model='recordForm.orderStatus'>
+						<el-option
+							v-for='item in orderOptions'
+							:key='item.value'
+							:value='item.value'
+							:label='item.label'>
+						</el-option>
+					</el-select>
+				</el-form-item>
+				<br />
+				<el-form-item label='礼品消息'>
+					<el-input v-model='recordForm.giftInfo' placeholder='礼品名称/内部ID/外部ID' style='width: 220px;'></el-input>
+				</el-form-item>
+				<el-form-item label='积分兑换数'>
+					<el-input v-model='recordForm.giftExchangeNum' style='width: 200px;'></el-input>
+				</el-form-item>
+				<el-form-item label='订单编号'>
+					<el-input v-model='recordForm.orderNumber' style='width: 200px;'></el-input>
+				</el-form-item>
+				<el-form-item label='会员手机号'>
+					<el-input v-model='recordForm.phoneNumber' style='width: 200px;'></el-input>
+				</el-form-item>
+				<el-button type='primary' class='button-radius'>查 询</el-button>							
 			</el-form>
 		</div>
 		<div class="operation-btn">
@@ -266,7 +245,6 @@
 					exchangeType: 'shipping',
 					counterName: '',
 					needPoint: 5000,
-
 				},
 				dialogFormVisible: false
 			}

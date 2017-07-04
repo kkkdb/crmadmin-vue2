@@ -40,7 +40,7 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                    this.$router.push({name: 'vipLevelManage'});
+                    this.$router.push({name: 'home'});
                 //         localStorage.setItem('ms_username',this.ruleForm.username);
                 //         this.$router.push('/readme');
                 //     } else {
@@ -82,7 +82,7 @@
         background: #fff;
     }
     .login-btn{
-        text-align: center;
+        text-align: center;        
     }
     .login-btn button{
         width:100%;

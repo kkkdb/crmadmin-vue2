@@ -10,14 +10,7 @@
 				<el-form-item label="会员手机号" prop="mobile">
 					<el-input v-model="searchForm.mobile" placeholder="请输入手机号"></el-input>
 				</el-form-item>
-				<el-form-item label="当前等级" prop="level">
-					<el-select v-model="searchForm.level" placeholder="请选择等级">
-						<el-option label="普通会员" value="1"></el-option>
-						<el-option label="白银会员" value="2"></el-option>
-						<el-option label="黄金会员" value="3"></el-option>
-						<el-option label="铂金会员" value="4"></el-option>
-					</el-select>
-				</el-form-item>
+				<vip-level-select :vip-level='searchForm.level' @selectLevel='selectLevel'></vip-level-select>
 				<el-form-item>
 					<el-button type="primary" @click='search'>查询</el-button>
 					<el-button @click="resetForm('searchForm')">重置</el-button>
@@ -59,6 +52,7 @@
 
 <script>
 	import navBar from '../../../component/navBar'
+	import vipLevelSelect from '../../../component/common/vipLevelSelect'
 	export default{
 		data(){
 			return{
@@ -121,9 +115,13 @@
 			}
 		},
 		components: {
-			navBar
+			navBar,
+			vipLevelSelect
 		},
 		methods:{
+			selectLevel(data){
+				this.searchForm.level = data
+			},
 			search(){
 
 			},

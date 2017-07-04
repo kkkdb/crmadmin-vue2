@@ -62,6 +62,14 @@ export default new VueRouter({
                 name: 'trialApplyRecord',
                 path: '/trialApplyRecord',
                 component: require('./view/vipCenter/exchangeAndTrial/trialApplyRecord')  //试用申请记录
+            },{
+                name: 'customerList',
+                path: '/customerList',
+                component: require('./view/customer/customerList')  //客户列表
+            },{
+                name: 'customerSegmentation',
+                path: '/customerSegmentation',
+                component: require('./view/customer/customerSegmentation')  //客户分群
             },
             ]
         }, 

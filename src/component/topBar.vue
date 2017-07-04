@@ -1,13 +1,14 @@
 <template>
     <div class="header">
         <div class="logo">CRM 管理系统</div>
-		<div class="level-one-menu">
+		<!-- <div class="level-one-menu">
 			<el-menu :default-active="oneLevel" class="el-menu-demo" mode="horizontal" @select="handleSelect">
 				<el-menu-item index="1"><i class="fa fa-diamond"></i> 会员中心</el-menu-item>
-				<el-menu-item index="2"><i class="fa fa-yelp"></i> 营销触达</el-menu-item>
-				<el-menu-item index="3"><i class="fa fa-pie-chart"></i> 数据洞察</el-menu-item>
+                <el-menu-item index="2"><i class="fa fa-yelp"></i> 客户管理</el-menu-item>
+				<el-menu-item index="3"><i class="fa fa-yelp"></i> 营销触达</el-menu-item>
+				<el-menu-item index="4"><i class="fa fa-pie-chart"></i> 数据洞察</el-menu-item>
 			</el-menu>
-		</div>
+		</div> -->
         <div class="login-out right" @click='loginOut'>
         	<i class="fa fa-power-off"></i>
         </div>
@@ -66,6 +67,16 @@
 		        			id: 'trialApplyRecord'
 		        		}]
 		        	}],
+                    [{
+                        title: '客户管理',
+                        sub_list: [{
+                            name: '客户列表',
+                            id: 'customerList'
+                        },{
+                            name: '客户分群',
+                            id: 'customerSegmentation'
+                        }]
+                    }],
 		        	[{
 		        		title: '等级二',
 		        		sub_list: [{
@@ -127,6 +138,7 @@
         background: #008DE7;
         text-align: center;
         font-size: 18px;
+        color: #fff;
     }
     .level-one-menu{
     	float: left;
@@ -184,6 +196,7 @@
     		cursor: pointer;
     		padding: 2.5px 5px;
     		@include borderRadius(100%);
+            color: #fff;
     	}
     }
 </style>
